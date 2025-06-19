@@ -1,4 +1,4 @@
-🍰 Estoque Control – Sistema de Gestão para Confeitarias
+#🍰 Estoque Control – Sistema de Gestão para Confeitarias
 Estoque Control é uma aplicação web desenvolvida com Angular para gestão de estoque, idealizada para atender às necessidades da Confeitaria do Jony. Mais do que um sistema funcional, este projeto tem um forte propósito educacional, sendo uma excelente oportunidade para quem deseja aprender práticas modernas de desenvolvimento frontend com Angular.
 
 ✨ Funcionalidades Principais
