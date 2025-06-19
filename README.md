@@ -1,50 +1,47 @@
-🍰 Estoque Control - Confeitaria do Jony
-Bem-vindo(a) ao Estoque Control, um sistema web desenvolvido para facilitar o controle de estoque em confeitarias. Este projeto nasceu da necessidade de organizar e otimizar os processos internos da Confeitaria do Jony, e está em constante evolução.
+🍰 Estoque Control – Sistema de Gestão para Confeitarias
+Seja bem-vindo(a) ao Estoque Control, um sistema web desenvolvido com foco em organização, eficiência e aprendizado. Criado para atender às demandas da Confeitaria do Jony, este projeto também é uma excelente vitrine para quem deseja aprender mais sobre desenvolvimento frontend com Angular.
 
-🚀 Tecnologias Utilizadas
-Este projeto foi construído com as seguintes tecnologias:
+✨ Destaques do Projeto
+📦 Controle completo de estoque: entradas, saídas e visualização de produtos
 
-Angular CLI 15.2.5 – Framework principal para construção da interface web
+🧁 Interface intuitiva e responsiva
 
-TypeScript – Linguagem principal de desenvolvimento
+🧱 Estrutura modular e escalável
 
-HTML5 – Estruturação das páginas
+🧪 Testes automatizados com Karma
 
-SCSS – Estilização moderna e modular
+🛠️ Tecnologias Utilizadas
+Este projeto foi desenvolvido com:
 
-Karma – Execução de testes unitários
+Angular CLI 15.2.5
 
-Angular CLI Tools – Para build, scaffolding e testes
+TypeScript
 
-🧠 Objetivo Educacional
-Este repositório tem como propósito não apenas resolver um problema real, mas também servir como referência para estudantes e desenvolvedores que desejam aprender mais sobre Angular e boas práticas de desenvolvimento frontend.
+HTML5
 
-💡 Funcionalidades
-Cadastro e visualização de produtos
+SCSS
 
-Controle de entradas e saídas de estoque
+Karma (testes unitários)
 
-Interface amigável e responsiva
+Angular CLI Tools (build, scaffolding, testes)
 
-Estrutura modular para fácil manutenção e expansão
+🎯 Propósito Educacional
+Mais do que um sistema funcional, este repositório é um recurso de aprendizado. Ideal para estudantes, iniciantes em Angular ou desenvolvedores que buscam boas práticas em projetos frontend.
 
-🛠️ Como Rodar o Projeto
-Clone o repositório:
-
+🚀 Como Executar Localmente
 bash
+# Clone o repositório
 git clone https://github.com/Johnatan-boot/Estoque-control-Confeitaria.git
-Instale as dependências:
 
-bash
+# Instale as dependências
 npm install
-Inicie o servidor de desenvolvimento:
 
-bash
+# Inicie o servidor de desenvolvimento
 ng serve
 Acesse http://localhost:4200/ no navegador.
 
-🧪 Testes
-Execute os testes unitários com:
-
+🧪 Executando os Testes
 bash
 ng test
+🤝 Vamos nos conectar?
+Se este projeto te inspirou ou ajudou de alguma forma, vamos conversar no LinkedIn! Compartilhe suas ideias, sugestões ou melhorias. A comunidade cresce quando colaboramos. 💬
