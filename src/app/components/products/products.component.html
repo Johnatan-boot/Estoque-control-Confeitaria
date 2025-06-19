@@ -1,0 +1,223 @@
+<app-toolbar-navigation></app-toolbar-navigation>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
+          placeholder="search products"
+        />
+      </div>
+      <span id="button-search">
+        <i class="bi bi-search"></i>
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a
+        (click)="
+          filter(
+            '
+            todosprodutos
+            '
+          )
+        "
+      >
+      <img
+       src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100" alt="">
+
+        <h6>Todos os Produtos</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a
+        (click)="
+          filter(
+            '
+            bolostradicionais
+            '
+          )
+        "
+      >
+        <img
+          style="width: 60px; height:60px; margin-top:5px"
+          src="https://media.istockphoto.com/id/1400612844/pt/foto/delicious-cornmeal-cake-traditional-brazilian-cake.jpg?b=1&s=612x612&w=0&k=20&c=WNxlnfc1PVlxaNpPLONYib3wr0WMnz0ixGv0jlQV4Vs="
+          alt=""
+        />
+        <h6>Bolos Tradicionais</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a
+        (click)="
+          filter(
+            '
+            boloscobertura
+            '
+          )
+        "
+      >
+        <img style="width: 60px; height:60px; margin-top:5px"
+          src="https://images.pexels.com/photos/30350717/pexels-photo-30350717/free-photo-of-exposicao-de-doces-festivos-do-mercado-de-natal-alemao.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+        <h6>Bolos com Cobertura</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('bolosfestas')">
+        <img
+          style="width: 60px; height:60px; margin-top: 5px"
+          src="https://images.pexels.com/photos/691147/pexels-photo-691147.jpeg?auto=compress&cs=tinysrgb&w=600"
+          alt=""
+        />
+        <h6>Bolos para Festas</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <ng-container
+      *ngFor="let productList of filterCategory | filter : searchKey : 'title'"
+    >
+      <div class="card col-md-2">
+        <img src="{{ productList.image }}" alt="" />
+        <h5
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          {{ productList.title }}
+        </h5>
+        <p
+          style="
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100ch;
+          "
+        >
+          {{ productList.description }}
+        </p>
+        <p><strong>Preço:</strong> R${{ productList.price }},00</p>
+        <div class="row">
+          <button class="btn btn-primary" (click)="addtocart(productList)">
+            Add to cart
+          </button>
+        </div>
+        <div class="row">
+          <button class="btn btn-danger">remover</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div
+  class="card col-md-2"
+  *ngFor="let product of products | filter : searchKey : 'title'"
+>
+<img [src]="product.image" alt="">
+  <h5  style="
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100ch;
+">{{ product.name }}</h5>
+ <div class="boxcontent">
+  <span>Categoria:{{ product.category }}</span><br>
+  <span>Preço: {{ product.price }}</span><br>
+  <span>Quantidade: {{ product.quantidade }}</span><br>
+  <span>Validade:{{ product.validade }}</span>
+  <div class="row">
+    <button class="btn btn-primary" (click)="addtocart(products)">
+      Add to cart
+    </button>
+  </div>
+  <div class="row">
+    <button class="btn btn-danger">remover</button>
+  </div>
+ </div>
+</div>
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Produts List</h2>
+
+<div class="form-group row">
+
+  <div class="row">
+    <label class="col-sm-2 col-form-label">Filter By:</label>
+
+    <div class="col-sm-10">
+        <input [(ngModel)]="filters" class="form-control">
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Produtos</th>
+            <th>Preço</th>
+            <th>Codigo</th>
+            <th>Data Fabricação</th>
+            <th>Data Validade</th>
+            <th>Quantidade</th>
+            <th>Categoria</th>
+            <th>Descrição</th>
+            <th>Avaliação</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let products of filteredProducts">
+            <td><img [src]="products.imageUrl" width="40" height="40" ></td>
+            <td>{{ products.produto }}</td>
+            <td>{{ products.price }}</td>
+            <td>{{ products.code | lowercase | replace: '-': ' ' }}</td>
+            <td>{{ products.dateFabricacao| date: 'dd/MM/yyyy' }}</td>
+            <td>{{ products.dateValidade| date: 'dd/MM/yyyy' }}</td>
+            <td>{{ products.quantidade}}</td>
+            <td>{{ products.category}}</td>
+            <td>{{ products.description}}</td>
+            <td>
+                <app-star [rating]="products.rating"></app-star>
+            </td>
+            <td>
+                <a [routerLink]="['#', products._id]" class="btn btn-primary mr-2">Edit</a>
+                <button (click)="deleteById(products._id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+</div>
+
+    </div>
+  </div>
+</div>
