@@ -1,27 +1,50 @@
-# StockControl
+🍰 Estoque Control - Confeitaria do Jony
+Bem-vindo(a) ao Estoque Control, um sistema web desenvolvido para facilitar o controle de estoque em confeitarias. Este projeto nasceu da necessidade de organizar e otimizar os processos internos da Confeitaria do Jony, e está em constante evolução.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.5.
+🚀 Tecnologias Utilizadas
+Este projeto foi construído com as seguintes tecnologias:
 
-## Development server
+Angular CLI 15.2.5 – Framework principal para construção da interface web
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+TypeScript – Linguagem principal de desenvolvimento
 
-## Code scaffolding
+HTML5 – Estruturação das páginas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+SCSS – Estilização moderna e modular
 
-## Build
+Karma – Execução de testes unitários
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Angular CLI Tools – Para build, scaffolding e testes
 
-## Running unit tests
+🧠 Objetivo Educacional
+Este repositório tem como propósito não apenas resolver um problema real, mas também servir como referência para estudantes e desenvolvedores que desejam aprender mais sobre Angular e boas práticas de desenvolvimento frontend.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+💡 Funcionalidades
+Cadastro e visualização de produtos
 
-## Running end-to-end tests
+Controle de entradas e saídas de estoque
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Interface amigável e responsiva
 
-## Further help
+Estrutura modular para fácil manutenção e expansão
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🛠️ Como Rodar o Projeto
+Clone o repositório:
+
+bash
+git clone https://github.com/Johnatan-boot/Estoque-control-Confeitaria.git
+Instale as dependências:
+
+bash
+npm install
+Inicie o servidor de desenvolvimento:
+
+bash
+ng serve
+Acesse http://localhost:4200/ no navegador.
+
+🧪 Testes
+Execute os testes unitários com:
+
+bash
+ng test
